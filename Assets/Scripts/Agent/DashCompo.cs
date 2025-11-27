@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 namespace Agent
@@ -10,6 +9,7 @@ namespace Agent
         [SerializeField] private float dashCooldown = 5f;
         private bool _isCoolTime = false;
         private Rigidbody2D _rb;
+        private bool _doDash = false;
 
         private void Awake()
         {
@@ -20,10 +20,19 @@ namespace Agent
         {
             if (!_isCoolTime && Input.GetKeyDown(KeyCode.Space))
             {
-                Dash();
-                Debug.Log("d");
+                _doDash = true;
                 _isCoolTime = true;
                 StartCoroutine(CoolDown());
+                Debug.Log("Dash requested");
+            }
+        }
+
+        private void FixedUpdate()
+        {
+            if (_doDash)
+            {
+                _doDash = false;
+                _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, dashPower);
             }
         }
 
@@ -31,11 +40,6 @@ namespace Agent
         {
             yield return new WaitForSeconds(dashCooldown);
             _isCoolTime = false;
-        }
-
-        private void Dash()
-        {
-            _rb.AddForce(Vector2.up * dashPower);
         }
     }
 }
