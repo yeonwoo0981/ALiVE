@@ -1,8 +1,7 @@
-using System;
 using TMPro;
 using UnityEngine;
 
-namespace UI
+namespace _01_Scripts.UI
 {
     public class AliveTimeText : MonoBehaviour
     {
@@ -34,7 +33,7 @@ namespace UI
 
         private void UnName()
         {
-            // 여따가 전용 UI로 생존시간 넘기기
+            // 여따가 게임 오버 됐을 때 UI에 생존시간 넘기기
         }
         
         private void OnDisable()

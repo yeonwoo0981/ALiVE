@@ -72,26 +72,6 @@ namespace _01_Scripts.Agent
             if (trail != null)
                 trail.time = 0.1f;
             
-            try
-            {
-                var playerType = typeof(Player.Player); // 컴파일 타임에 Player가 없으면 에러 발생하므로 try-catch로 안전 처리
-                var instProp = playerType.GetProperty("Instance", System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public);
-                if (instProp != null)
-                {
-                    var inst = instProp.GetValue(null);
-                    if (inst != null)
-                    {
-                        var ultimateState = playerType.GetMethod("Mujuck");
-                        if (ultimateState != null)
-                            ultimateState.Invoke(inst, new object[] { true });
-                    }
-                }
-            }
-            catch
-            {
-                
-            }
-
             // 방향 보정: 입력이 없으면(0,0) 자식의 localScale.x로 바라보는 방향 사용
             if (dir == Vector2.zero)
             {
@@ -127,18 +107,7 @@ namespace _01_Scripts.Agent
             
             try
             {
-                var playerType = typeof(Player.Player);
-                var instProp = playerType.GetProperty("Instance", System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public);
-                if (instProp != null)
-                {
-                    var inst = instProp.GetValue(null);
-                    if (inst != null)
-                    {
-                        var ultimateState = playerType.GetMethod("Mujuck");
-                        if (ultimateState != null)
-                            ultimateState.Invoke(inst, new object[] { false });
-                    }
-                }
+              
             }
             catch
             {

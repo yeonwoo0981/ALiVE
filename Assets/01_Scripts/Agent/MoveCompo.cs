@@ -1,8 +1,7 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Agent
+namespace _01_Scripts.Agent
 {
     public class MoveCompo : MonoBehaviour
     {

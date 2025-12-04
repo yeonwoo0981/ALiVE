@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Agent
+namespace _01_Scripts.Agent
 {
     public class AttackCompo : MonoBehaviour
     {

@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
-namespace System
+namespace _01_Scripts.System
 {
     public class HealthSystem : MonoBehaviour
     {

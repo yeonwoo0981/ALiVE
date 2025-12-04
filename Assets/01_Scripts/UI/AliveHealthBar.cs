@@ -1,8 +1,8 @@
-﻿using System;
+﻿using _01_Scripts.System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI
+namespace _01_Scripts.UI
 {
     public class AliveHealthBar : MonoBehaviour
     {

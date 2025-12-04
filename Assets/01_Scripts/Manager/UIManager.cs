@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Manager
+namespace _01_Scripts.Manager
 {
     public class UIManager : MonoBehaviour
     {
         public void StartButton()
         {
-            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene("Loading");
         }
 
         public void ExitButton()
