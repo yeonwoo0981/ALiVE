@@ -13,15 +13,15 @@ namespace _01_Scripts.UI
         private void Awake()
         {
             _rectTransform = GetComponent<RectTransform>();
-            
-            _originSize = _rectTransform.sizeDelta.x;
+
+            _originSize = _rectTransform.transform.localScale.x;
         }
 
         public void OnPointerEnter(PointerEventData eventData)
         {
             _rectTransform.DOKill();
-            _rectTransform.DOSizeDelta(
-                new Vector2(250f, _rectTransform.sizeDelta.x),
+            _rectTransform.DOScale(
+                new Vector2(1.2f, 1.2f),
                 0.2f
             ).SetEase(Ease.Flash);
         }
@@ -29,8 +29,8 @@ namespace _01_Scripts.UI
         public void OnPointerExit(PointerEventData eventData)
         {
             _rectTransform.DOKill();
-            _rectTransform.DOSizeDelta(
-                new Vector2(_originSize, _rectTransform.sizeDelta.y),
+            _rectTransform.DOScale(
+                new Vector2(1f, 1f),
                 0.2f)
                 .SetEase(Ease.Flash);
         }
