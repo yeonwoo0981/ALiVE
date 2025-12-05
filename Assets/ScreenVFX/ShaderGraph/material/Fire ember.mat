@@ -66,9 +66,9 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - Color_392E3724: {r: 0.9822357, g: 1, b: 0.7311321, a: 1}
-    - Color_A54790A2: {r: 0.5849056, g: 0, b: 0, a: 0}
-    - Color_A5D62E35: {r: 1, g: 0.25303337, b: 0, a: 0}
+    - Color_392E3724: {r: 0.41823888, g: 1, b: 0.5359911, a: 1}
+    - Color_A54790A2: {r: 0.24842751, g: 0.9554938, b: 1, a: 0}
+    - Color_A5D62E35: {r: 0, g: 0.4168791, b: 0.76729554, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &2966839140919397352
