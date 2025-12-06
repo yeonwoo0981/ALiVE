@@ -287,12 +287,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f994dd86b52b452ca8d0cabf11c471f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashPower: 300
-  dashCooldown: 2
-  stopThreshold: 2
-  decayFactor: 0.85
-  decayStepSeconds: 0.01
-  trail: {fileID: 1219188417}
+  addSpeed: 3
+  speedTime: 5
+  <SpeedCool>k__BackingField: 10
 --- !u!114 &151912898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4689abaaac45349172f40c3191110b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  <Speed>k__BackingField: 5
 --- !u!114 &151912899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,7 +316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <MoveCompo>k__BackingField: {fileID: 151912898}
-  <DashCompo>k__BackingField: {fileID: 151912897}
+  <SpeedCompo>k__BackingField: {fileID: 151912897}
   <HealthCompo>k__BackingField: {fileID: 151912900}
 --- !u!114 &151912900
 MonoBehaviour:
@@ -773,8 +770,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'ALiVE TIME: 00:00'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ff267d2515dada34ba351a8ffb4280e8, type: 2}
-  m_sharedMaterial: {fileID: 21744047739656124, guid: ff267d2515dada34ba351a8ffb4280e8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5955cb03b87dd684a905509148ba4dbd, type: 2}
+  m_sharedMaterial: {fileID: 21700449227511232, guid: 5955cb03b87dd684a905509148ba4dbd, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1274,7 +1271,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &906617296
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6503,6 +6500,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1318296561}
   - component: {fileID: 1318296563}
+  - component: {fileID: 1318296564}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -6581,6 +6579,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1318296564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318296560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fe6e1c6930444abba4eaaa82c019d32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1359512162
 GameObject:
   m_ObjectHideFlags: 0

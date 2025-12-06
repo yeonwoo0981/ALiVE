@@ -5,7 +5,7 @@ namespace _01_Scripts.Agent
 {
     public class MoveCompo : MonoBehaviour
     {
-        [SerializeField] private float speed = 5f;
+        [field:SerializeField] public float Speed { get; set; } = 5f;
         private Rigidbody2D _rb;
         private Vector2 _moveDir;
 
@@ -18,10 +18,10 @@ namespace _01_Scripts.Agent
         {
             _moveDir = value.Get<Vector2>();
         }
-
+        
         private void FixedUpdate()
         {
-            _rb.linearVelocity = _moveDir * speed;
+            _rb.linearVelocity = _moveDir * Speed;
         }
     }
 }

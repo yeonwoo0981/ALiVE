@@ -12,5 +12,10 @@ namespace _01_Scripts.UI
         {
             _image = GetComponent<Image>();
         }
+
+        private void Start()
+        {
+            
+        }
     }
 }
