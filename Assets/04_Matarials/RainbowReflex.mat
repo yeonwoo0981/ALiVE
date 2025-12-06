@@ -12,8 +12,6 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _ENABLECAMOUFLAGE_ON
-  - _ENABLEENCHANTED_ON
   - _ENABLERAINBOW_ON
   - _ENABLESHINE_ON
   - _ENCHANTEDRAINBOWTOGGLE_ON
@@ -215,7 +213,7 @@ Material:
     - _EnableBlackTint: 0
     - _EnableBrightness: 0
     - _EnableBurn: 0
-    - _EnableCamouflage: 1
+    - _EnableCamouflage: 0
     - _EnableCheckerboard: 0
     - _EnableColorReplace: 0
     - _EnableContrast: 0
@@ -223,7 +221,7 @@ Material:
     - _EnableDirectionalAlphaFade: 0
     - _EnableDirectionalDistortion: 0
     - _EnableDirectionalGlowFade: 0
-    - _EnableEnchanted: 1
+    - _EnableEnchanted: 0
     - _EnableExternalAlpha: 0
     - _EnableFlame: 0
     - _EnableFrozen: 0
@@ -372,8 +370,8 @@ Material:
     - _PoisonShiftSpeed: 0.2
     - _QueueControl: -1
     - _QueueOffset: 0
-    - _RainbowBrightness: 2
-    - _RainbowContrast: 1
+    - _RainbowBrightness: 10.25
+    - _RainbowContrast: 2.95
     - _RainbowDensity: 0.5
     - _RainbowFade: 1
     - _RainbowNoiseFactor: 0.2

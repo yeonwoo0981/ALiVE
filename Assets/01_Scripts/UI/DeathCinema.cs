@@ -1,21 +1,30 @@
 ﻿using System;
+using System.Collections;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace _01_Scripts.UI
 {
     public class DeathCinema : MonoBehaviour
     {
-        private Image _image;
-
-        private void Awake()
+        [SerializeField] private TextMeshProUGUI aliveTimeText;
+        private Coroutine _running;
+        
+        public void Show(int min, int sec)
         {
-            _image = GetComponent<Image>();
+            aliveTimeText.text = $"생존 시간 - {min:D2}:{sec:D2}";
+            gameObject.SetActive(true);
+
+            if (_running != null) StopCoroutine(_running);
+            _running = StartCoroutine(RestartCoroutine());
         }
 
-        private void Start()
+        private IEnumerator RestartCoroutine()
         {
-            
+            yield return new WaitForSeconds(5f);
+            SceneManager.LoadScene("Loading");
         }
     }
 }

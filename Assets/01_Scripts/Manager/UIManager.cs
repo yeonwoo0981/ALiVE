@@ -13,6 +13,7 @@ namespace _01_Scripts.Manager
         public void ExitButton()
         {
             Application.Quit();
+            Debug.Log("ASDF");
         }
     }
 }
